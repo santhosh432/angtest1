@@ -2,7 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { provideAuth } from 'angular2-jwt';
+
+
+//import { provideAuth } from 'angular4-jwt';
+//import { AuthConfig, AuthHttp } from 'angular2-jwt';
 
 // import { fakeBackendProvider } from './helpers/index';
 // import { MockBackend, MockConnection } from '@angular/http/testing';
@@ -13,6 +16,12 @@ import { LoginComponent } from './pages/login/login.component';
 import { RoutingModule } from './app.routes';
 // services
 // import { AuthService } from './services/auth.service';
+
+
+// added11 ysk
+import { EventService } from './services/event.service';
+
+
 import { AuthGuard } from './guards/index';
 import { AuthenticationService, UserService } from './services/index';
 // full calendar
@@ -33,6 +42,8 @@ import { NavbarComponent } from './base_components/navbar/navbar.component';
 import { SidebarComponent } from './base_components/sidebar/sidebar.component';
 import { FooterComponent } from './base_components/footer/footer.component';
 import { AllschedulesComponent } from './pages/allschedules/allschedules.component';
+
+
 
 @NgModule({
   declarations: [
@@ -63,7 +74,9 @@ import { AllschedulesComponent } from './pages/allschedules/allschedules.compone
     AuthGuard,
     AuthenticationService,
     UserService,
-
+    EventService,
+    
+//added11 ysk EventService
     // providers used to create fake backend
     //fakeBackendProvider,
     //MockBackend,
